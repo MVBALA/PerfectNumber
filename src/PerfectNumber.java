@@ -1,2 +1,19 @@
-package PACKAGE_NAME;public class PerfectNumber {
+public class PerfectNumber {
+    public static boolean isPerfectNumber(int number) {
+        if (number <= 0)
+            return false;
+        else {
+            int i = 1;
+            int sum = 0;
+            while (i < number) {
+                if (number % i == 0)
+                    sum += i;
+                i++;
+            }
+            if (number == sum)
+                return true;
+            else
+                return false;
+        }
+    }
 }
